@@ -1,0 +1,307 @@
+/* ==========================================================================
+   1. BASE STYLES & CSS RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1B4332;   /* Deep Botanical Green */
+    --secondary-color: #E8A598; /* Soft Rose Blush */
+    --accent-color: #D8F3DC;    /* Pale Leaf Green */
+    --text-color: #2D3748;      /* Charcoal Body Text */
+    --bg-color: #F8F9FA;        /* Cream/Off-White Background */
+    --white: #FFFFFF;
+    --font-main: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Global Responsive Base Rule for Images */
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   3. LAYOUT & SECTIONS
+   ========================================================================== */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.page-header h2 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.8)), url('../images/hero-flower.jpg') center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover, .btn:focus {
+    background-color: var(--white);
+}
+
+/* Highlights & Services Grid */
+.highlights, .mission-vision {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.highlights div, .mission-vision div, .service-category {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.service-category {
+    margin-bottom: 2rem;
+}
+
+.service-category h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-category ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+/* ==========================================================================
+   3.1 PAGE-SPECIFIC IMAGE SIZING
+   ========================================================================== */
+
+/* Index Page Intro Image */
+.intro img {
+    max-width: 800px;
+    height: 380px;
+    margin: 1.5rem auto 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Page Workshop Image */
+.history img {
+    max-width: 600px;
+    height: 320px;
+    margin: 1.5rem auto 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Page Category Images (funeral.jpg, wedding.jpg, OIP.webp) */
+.service-category img {
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   4. FORMS & INPUTS
+   ========================================================================== */
+form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: 1px solid var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   5. LOCATIONS & MAPS
+   ========================================================================== */
+.locations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.location-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Tablet View (Max Width: 900px) */
+@media (max-width: 900px) {
+    .highlights, .mission-vision, .locations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .intro img, .history img {
+        height: 280px;
+    }
+}
+
+/* Mobile View (Max Width: 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .highlights, .mission-vision, .locations {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Adjust image heights for mobile screens */
+    .intro img, .history img, .service-category img {
+        height: 200px;
+    }
+}
