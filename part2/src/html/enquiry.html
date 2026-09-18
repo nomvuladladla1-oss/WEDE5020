@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simphiwe's Flower Pot | Custom Enquiry</title>
+
+    <!--adding the css link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Creating the main Navigation Header -->
+    <header>
+        <div class="logo">
+            <!--initialing the main header, but having name of the business -->
+            <h1>Simphiwe's Flower Pot</h1>
+        </div>
+        <nav>
+            <ul>
+                <!--Creating the links between each page-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services & Arrangements</a></li>
+                <li><a href="enquiry.html">Custom Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Initializing the main content Area -->
+    <main>
+        <!-- Page Title -->
+        <section class="page-header">
+            <h2>Custom Order & Event Enquiry</h2>
+            <p>Fill out the form below to request a personalized quote or book a consultation with our floral design team.</p>
+        </section>
+
+        <!-- Interactive Form Section -->
+        <section class="enquiry-form">
+            <form action="#" method="post">
+                <!-- Personal Details Group -->
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required placeholder="e.g. Jane Doe"><br><br>
+
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="e.g. jane@example.com"><br><br>
+
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" required placeholder="e.g. +27 82 123 4567"><br><br>
+                </fieldset>
+
+                <br>
+
+                <!-- Event Details Group -->
+                <fieldset>
+                    <legend>Order & Event Details</legend>
+
+                    <label for="event-type">Occasion / Event Type:</label><br>
+                    <select id="event-type" name="event-type" required>
+                        <option value="">-- Please Select an Event Type --</option>
+                        <option value="funeral">Funeral / Memorial Service</option>
+                        <option value="wedding">Wedding Ceremony</option>
+                        <option value="corporate">Corporate Function</option>
+                        <option value="seasonal">Seasonal / Gift Bouquet</option>
+                        <option value="other">Other Custom Order</option>
+                    </select><br><br>
+
+                    <label for="event-date">Date of Event / Required Delivery:</label><br>
+                    <input type="date" id="event-date" name="event-date" required><br><br>
+
+                    <label for="budget">Estimated Budget (ZAR):</label><br>
+                    <input type="number" id="budget" name="budget" min="500" step="100" placeholder="e.g. 2500"><br><br>
+
+                    <label for="description">Specific Floral Requirements or Preferences:</label><br>
+                    <textarea id="description" name="description" rows="5" cols="40" placeholder="Tell us about your preferred color schemes, flower types, or special arrangements..."></textarea><br><br>
+
+                    <input type="checkbox" id="consultation" name="consultation" value="yes">
+                    <label for="consultation">I would like to request an in-person consultation appointment.</label><br><br>
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Submit Enquiry</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer>
+        <p>&copy; 2026 Simphiwe's Flower Pot. All Rights Reserved.</p>
+        <p>Contact us: info@simphiwesflowerpot.co.za | +27 78 123 8738</p>
+    </footer>
+
+</body>
+</html>
